@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
             status: 'Ready'
         },
         {
+            name: 'Buko Pandan',
+            image: 'images/buko-pandan.png',
+            description: 'Isian kelapa muda, agar-agar, nata de coco, sagu mutiara, selasih dengan creamy dan taburan keju.',
+            price: 'Rp15.000',
+            status: 'Ready'
+        },
+        {
             name: 'Spaghetti Brulee',
             image: 'images/spaghetti-brulee.png',
             description: 'Spaghetti bolognese creamy, dipanggang dengan saus bechamel keju.',
