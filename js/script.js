@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const menuContainer = document.getElementById('menu-container');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const captionText = document.getElementById('caption');
+    const span = document.getElementsByClassName('close-modal')[0];
 
     const products = [
         {
@@ -40,14 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
 
-            const statusClass = product.status.toLowerCase().replace('-', ''); // 'preorder' atau 'ready'
+            const statusClass = product.status.toLowerCase().replace('-', '');
 
             productCard.innerHTML = `
                 <div class="product-image-container">
                     <span class="status-label ${statusClass}">${product.status}</span>
-                    <a href="${whatsappMessage}" target="_blank">
-                        <img src="${product.image}" alt="${product.name}" onerror="this.onerror=null;this.src='https://via.placeholder.com/280x200.png?text=Gambar+Segera+Hadir';">
-                    </a>
+                    <img src="${product.image}" alt="${product.name}" class="product-img" onerror="this.onerror=null;this.src='https://via.placeholder.com/280x200.png?text=Gambar+Segera+Hadir';">
                 </div>
                 <div class="product-info">
                     <h3>${product.name}</h3>
@@ -58,5 +60,25 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             menuContainer.appendChild(productCard);
         });
+    }
+
+    document.querySelectorAll('.product-img').forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    });
+
+    if (span) {
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
     }
 }); 
