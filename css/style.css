@@ -1,0 +1,287 @@
+/* Warm & Cozy Theme */
+:root {
+    --bg-color: #FDF8F0; /* Creamy Almond */
+    --header-bg: #4E342E; /* Dark Brown */
+    --footer-bg: #3E2723; /* Darkest Brown */
+    --primary-accent: #D84315; /* Burnt Orange */
+    --primary-accent-dark: #BF360C; /* Darker Burnt Orange */
+    --text-dark: #4E342E; /* Dark Brown */
+    --text-light: #FDF8F0;
+    --card-bg: #FFFFFF;
+    --preorder-bg: #FFA000; /* Amber */
+    --ready-bg: #6D4C41; /* Medium Brown */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+header {
+    background: linear-gradient(to bottom, #6A4F4B, #4E342E); /* Glossy Brown */
+    color: var(--text-light);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Highlight for gloss effect */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--text-light);
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #e0e0e0;
+    font-size: 1.1em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: var(--text-dark);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.status-label {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    width: 140px;
+    text-align: center;
+    padding: 6px 0;
+    color: var(--text-light);
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transform: rotate(45deg);
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.status-label.ready {
+    background-color: #556B2F; /* Olive Green */
+}
+
+.status-label.preorder {
+    background-color: var(--preorder-bg); /* Tetap warna Amber */
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.product-info .deskripsi {
+    font-size: 0.9em;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.product-info .harga {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.btn-pesan {
+    display: block;
+    background-color: var(--primary-accent);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.btn-pesan:hover {
+    background-color: var(--primary-accent-dark);
+}
+
+#info-kontak {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+#info-kontak h2 {
+    border-bottom: 2px solid var(--primary-accent);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.info-kontak-container-single .alamat {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.info-kontak-container-single .alamat strong {
+    color: var(--text-dark);
+}
+
+.info-kontak-container-single .tombol-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn-kontak {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+}
+
+.btn-kontak {
+    background: var(--primary-accent);
+    color: #fff;
+    border-color: var(--primary-accent);
+}
+
+.btn-kontak:hover {
+    background: var(--primary-accent-dark);
+    border-color: var(--primary-accent-dark);
+    transform: translateY(-3px);
+}
+
+.btn-kontak.whatsapp {
+    background: #25D366;
+    border-color: #25D366;
+}
+
+.btn-kontak.whatsapp:hover {
+    background: #128C7E;
+    border-color: #128C7E;
+}
+
+.instagram-link {
+    font-size: 1.1em;
+}
+
+.instagram-link a {
+    color: var(--primary-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.instagram-link a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: linear-gradient(to bottom, #5D4037, #3E2723);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .kontak {
+    margin-bottom: 15px;
+}
+
+footer .kontak h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-accent);
+}
+
+footer a {
+    color: var(--primary-accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+} 
