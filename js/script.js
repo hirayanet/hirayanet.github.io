@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuContainer) {
         menuContainer.innerHTML = '';
         products.forEach(product => {
-            const whatsappMessage = `https://wa.me/6281212787704?text=${encodeURIComponent(`Halo, saya ingin pesan ${product.name}.`)}`;
+            const whatsappMessage = `https://wa.me/6281212787575?text=${encodeURIComponent(`Halo, saya ingin pesan ${product.name}.`)}`;
 
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
